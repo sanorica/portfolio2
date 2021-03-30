@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+/* reset___________________________*/
+html, body, h1, h2, h3, p, ul, ol, li, dl dt, dd{
+margin:0;
+padding:0;
+font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+line-height: 1.0;
+font-size:16px;
+}
+
+ul{
+list-style: none;
+}
+
+a {
+text-decoration: none;
+color:inherit;
+}
+
+img {
+border:none;
+vertical-align:bottom;
+max-width:100%;
+height:auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* body___________________________*/
+
+body {
+  background-color: #ccc;
+}
+
+/* common___________________________*/
+.flex {
+display:flex;}
+
+/* header___________________________*/
+.header_container {
+  height:120px;
+  overflow: hidden;
+}
+
+.title-bg {
+  clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
+  background-color: #eee;
+  margin-bottom:20px;
+  width:50%;
+  height:100%;
+  z-index: 3;
+}
+
+.title-contents {
+  padding:50px 20px;
+}
+
+/* navigation___________________________*/
+.main-navigation {
+width:50%;
+position:relative;
+}
+
+.menu-btn {
+height:100%;
+margin-left:-100%;
+clip-path: polygon(50% 0, 60% 0%, 35% 100%, 25% 100%);
+transition-duration: 2s;
+overflow: hidden;
+position:relative;
+cursor: pointer;
+background-color: #fed;
+  z-index:2;
+}
+
+.menu-btn::before {
+  content: "";
+  background: url("../img/right.png") fixed;
+  background-size: 2%;
+  width:100%;
+  height:300%;
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+
+.menu-btn.btn-open::before{
+    transform: scaleX(-1);
+}
+
+.menu-btn.btn-open{
+  transform:translateX(50%);
+}
+
+nav {
+  width:300px;
+  position:absolute;
+  top:50%;
+  left:-150%;
+  transition-duration: 2s;
+}
+
+nav.nav-open {
+  left:-15%;
+}
+
+nav ul.flex {
+  justify-content: space-between;
+}
