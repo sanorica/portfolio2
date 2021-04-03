@@ -272,6 +272,10 @@ margin-top:2em;
   background:transparent;
 }
 
+.vector-thumb .img-thumb {
+    overflow:visible;
+}
+
 .site-thumb {
   width:65%;
   height:auto;
