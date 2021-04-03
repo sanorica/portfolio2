@@ -4,7 +4,7 @@
 html, body, h1, h2, h3, p, ul, ol, li, dl dt, dd{
 margin:0;
 padding:0;
-font-family: 'Kiwi Maru', serif;
+font-family: 'M PLUS Rounded 1c', sans-serif;
 line-height: 1.0;
 font-size:16px;
 color:#fff;
@@ -45,8 +45,7 @@ display:flex;}
 
 .container {
   max-width:900px;
-  margin:0 auto;
-  margin-top:100px;
+  margin:100px auto 0;
   padding:50px;
   background:rgba(0,0,0,0.8);
   position:relative;
@@ -118,7 +117,7 @@ background:rgba(0,0,0,0.8);
 }
 
 #menu-title.btn-open {
-    transform: rotateX(360deg);
+  transform: rotateX(360deg);
 }
 
 .menu-btn.btn-open{
@@ -137,7 +136,7 @@ nav {
   left:-150%;
   transition-duration: 2s;
   opacity:0;
-    animation: nav-ani-back 0.5s;
+  animation: nav-ani-back 0.5s;
 }
 
 @keyframes nav-ani{
@@ -148,7 +147,6 @@ nav {
 nav.nav-open {
   left:0;
   animation: nav-ani 5.5s forwards;
-  /* opacity:1; */
 }
 
 nav ul.flex, .container .flex {
@@ -220,7 +218,7 @@ h3 {
   padding-bottom:1em;
 }
 
-.container p, .container li {
+.container p, .container li, .container h1, .container h2, .container h3 {
   opacity:0.9;
   line-height: 1.5;
 }
@@ -306,6 +304,7 @@ margin-top:2em;
 }
 
 #works img:hover {
+  -webkit-filter: none;
   filter: none;
 }
 
@@ -316,8 +315,6 @@ margin-top:2em;
 #works a::before{
   display:none;
 }
-
-
 
 /* page top___________________________*/
 .page-top {
@@ -356,3 +353,153 @@ footer p {
   text-align:center;
   color: rgba(0,0,0,0.8);
 }
+
+/* media query___________________________*/
+@media screen and (max-width:767px) {
+
+/* common___________________________*/
+  .container .flex {
+  display:block;}
+
+  .container:first-of-type {
+    margin-top:0px;
+  }
+
+  html, body, h1, h2, h3, p, ul, ol, li, dl dt, dd{
+  font-size:14px;
+  }
+
+/* header___________________________*/
+.header_container {
+  outline:none;
+  height:200px;
+}
+
+  .title-bg {
+    clip-path: none;
+    width:70%;
+  }
+
+  .title-contents {
+  height:120px;
+  }
+
+/* navigation___________________________*/
+.main-navigation {
+width:30%;
+}
+
+.menu-btn {
+background: transparent;
+}
+
+#menu-title {
+  bottom: 60%;
+  left: 20%;
+  color:#000;
+  z-index: 4;
+  font-weight: normal;
+  font-size: 1.3em;
+  color:rgba(255,255,255,0.4);
+  background: rgba(0,0,0,0.8);
+  padding:10px;
+  outline: 1px solid #000;
+  outline-offset: 5px;
+}
+
+#menu-title:hover{
+  color:rgba(255,255,255,0.4);
+}
+
+.menu-btn.btn-open{
+  transform:translate(0%);
+}
+
+#menu-title.btn-open {
+  transform: rotateY(720deg);
+}
+
+nav {
+  width:280%;
+  top:135px;
+  left:100%;
+  animation-duration: 2s;
+}
+
+nav.nav-open {
+  left:-210%;
+  z-index:4;
+}
+
+nav ul.flex {
+  align-items: center;
+}
+
+nav li {
+  font-size: 1.1em;
+  text-align: center;
+}
+
+/* contents___________________________*/
+h2{
+  font-size: 1.6em;
+}
+
+h3 {
+  font-size:1.2em;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+.container p, .container li {
+text-align: justify;
+  text-justify: inter-word;
+}
+
+.site-thumb, .site-info {
+  width:100%
+}
+
+.site-info {
+  margin-bottom:50px;
+}
+
+#works .site-thumb img {
+  -webkit-filter: none;
+  filter:none;
+}
+
+#works .graphics-section img:hover {
+  transform:scale(1);
+}
+ .vector-thumb.flex, .banner-thumb.flex {
+   display:flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+ }
+
+ .img-thumb {
+   width:48%;
+   height:auto;
+ }
+
+ /* page top___________________________*/
+ .page-top {
+ position:fixed;
+width:100%;
+right:0;
+bottom: 20px;
+}
+
+/* footer___________________________*/
+footer {
+  height:25vh;
+}
+
+footer p {
+font-size:1.1em;
+}
+
+} /* end media query */
