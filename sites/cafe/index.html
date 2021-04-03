@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caffe Italiano</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Caffe Italiano</h1>
+    </header>
+
+    <div class="key-visual">
+        <img src="img/cafe01.jpg" alt="Caffe Italiano画像">
+    </div>
+
+    <nav class="g-nav">
+        <ul>
+            <li><a href="#">Top</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#info">Info</a></li>
+            <li><a href="#">Access</a></li>
+        </ul>
+    </nav>
+
+    <div class="box" id="video">
+        <h2>Video</h2>
+        <div class="video-inner">
+            <video src="video/coffee.mp4" autoplay muted loop></video>
+        </div><!-- /.video-inner -->
+    </div><!-- /#video -->
+
+    <div class="box" id="menu">
+        <h2>Menu</h2>
+        <div class="menu-inner">
+            <p><img src="img/cafe01.jpg" alt="Caffe Italiano画像"></p>
+            <p><img src="img/cafe03.jpg" alt="Caffe Italiano画像"></p>
+            <p><img src="img/cafe02.jpg" alt="Caffe Italiano画像"></p>
+        </div>
+    </div><!-- /#menu -->
+
+    <div class="box" id="info">
+        <h2>News</h2>
+            <dl class="news-list" id="list-box">
+              <dt>2021/01/16</dt>
+              <dd>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</dd>
+              <dt>2021/01/15</dt>
+              <dd>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</dd>
+              <dt>2021/01/14</dt>
+              <dd>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</dd>
+              <dt>2021/01/13</dt>
+              <dd>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</dd>
+              <dt>2021/01/12</dt>
+              <dd>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</dd>
+            </dl>
+    </div><!-- /#info -->
+
+    <p id="top"><a href="#"><img src="img/topimg.svg"></a></p>
+
+    <footer>
+        <p><small>Caffe Italiano &copy; 2021</small></p>
+    </footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+$(function(){
+// per inserire cio` che si scrive in news txt
+$('#list-box').load('news.txt');
+
+//smooth scroll
+$('#top>a').on('click', function() {
+$('html,body').animate({scrollTop:0},1200);
+});
+
+}); // end function
+</script>
+
+</body>
+</html>

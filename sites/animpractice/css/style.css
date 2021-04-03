@@ -1,0 +1,600 @@
+@charset "UTF-8";
+
+/*** RESET ***/
+html,
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li{
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-weight: 200;
+    line-height: 1.0;
+    font-size:14px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    border: none;
+    vertical-align: bottom;
+    max-width: 100%;
+    height: auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*** RESET END ***/
+/* common
+---------------------------*/
+body {
+    background-color: #000;
+    color: #f3a9dd;
+}
+
+#home .container {
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end;
+}
+
+/* header
+---------------------------*/
+header {
+    padding: 20px 20px 20px 60px;
+    max-width: 800px;
+    margin: 0 auto;
+    height:17%;
+}
+
+h1 {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background: url(../img/logo.png) no-repeat left center;
+    height:93px;
+}
+
+.menu p {
+    font-size: 1.7em;
+    letter-spacing: 6px;
+}
+
+.menu:hover {
+    cursor: pointer;
+}
+
+/* navi
+---------------------------*/
+
+nav {
+position:absolute;
+top:134px;
+left:100%;
+width:100%;
+transition-duration: 1s;
+    opacity: 0;
+z-index: 100;
+    background: #000;
+}
+
+nav.slide {
+left:0%;
+opacity: 1;
+}
+
+nav ul {
+height: calc(100vh - 134px);
+width:100%;
+}
+
+nav li {
+color:#f3a9dd;
+text-align: center;
+height:25%;
+font-size: 2em;
+position:relative;
+    transition-duration: 0.5s;
+    letter-spacing: 2px;
+}
+
+nav li:hover {
+    color:#938294;
+    cursor: pointer;
+}
+
+nav a {
+    display:block;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+
+/* homepage lines
+---------------------------*/
+.line-one, .line-two, .line-three, .line-four, .line-zero {
+    background-color: #f3a9dd;
+    position: absolute;
+     width: 100%;
+    height: 1px;
+    transform-origin: left top;
+    z-index:300;
+}
+
+    @keyframes line-opening-width {
+from {
+      width:0;
+        }
+to {
+      width:100%; 
+}
+}
+
+@keyframes line-opening-top {
+  from {
+    top:100%;
+        }
+  to {
+    top:0%;
+    }
+}
+
+@keyframes line-opening-right {
+    0% {
+        right:100%;
+        width:0;
+    }
+    
+    100% {
+    right:0;
+    width:100%;
+    }
+}
+
+.line-zero {
+    top: 133px;
+  animation:line-opening-width 3s;
+}
+
+.line-one {
+    transform: rotate(90deg);
+    left: 10%;
+    top:0;
+    width:100%;
+    animation:line-opening-top 3s;
+}
+
+
+.line-two {
+    right:0;
+    top:60%;
+    animation:line-opening-right 6s;
+    transform: rotate(45deg);
+}
+
+.line-three {
+    transform: rotate(60deg);
+    left:80%;
+    top:0;
+    animation:line-opening-width 4s;
+}
+
+.line-four {
+    transform: rotate(-60deg);
+    left:80%;
+    top:100%;
+        animation:line-opening-width 7s;
+}
+
+/* homepage words
+---------------------------*/
+
+@keyframes words-left {
+    0% {
+        margin-right:100%;
+    }
+    
+    100% {
+    margin-right:0;
+    }
+}
+
+@keyframes words-right {
+    0% {
+    margin-left:100%;
+    }
+    
+    100% {
+    margin-left:0;
+    }
+}
+
+.web, .design, .inspiration, .creation, .emotion, .expression, .art, .ideas, .graphics, .solution, .interaction, .connection, .communication, .css, .html, .javascript {
+    position:absolute;
+}
+
+.design, .inspiration, .creation, .emotion, .expression, .art, .ideas, .graphics {
+  color:#938294;
+}
+
+.web, .solution, .interaction, .connection, .communication, .css, .html, .javascript {
+color:#a64277;
+}
+
+.web, .design {
+    font-size: 7.1em;
+}
+
+.solution, .connection, .inspiration, .javascript, .emotion {
+    font-size:2.8em;
+}
+
+.graphics, .interaction, .expression {
+     font-size:3.5em;
+}
+
+.html, .css, .creation, .ideas {
+    font-size:4.2em;
+}
+
+.communication, .art {
+    font-size: 5em;
+}
+
+.web {
+    left:39%;
+    top:27%;
+    animation: words-right 2s;
+}
+
+.communication {
+    left:49%;
+    top: 66%;
+    animation: words-right 2.5s;
+}
+
+.solution {
+    left:56%;
+    top:20%;
+    animation: words-right 3.5s;
+}
+
+.connection {
+    left:75%;
+    top:42%;
+    animation: words-right 5.5s;
+}
+
+.javascript {
+    left:25%;
+    top:82%;
+    animation: words-right 4.5s;
+}
+
+.interaction {
+    left:15%;
+    top:37%;
+    animation: words-right 4.5s;
+}
+
+.html {
+    left:42%;
+    top:88%;
+    animation: words-right 3.5s;
+}
+
+.css {
+    left:17%;
+     top:67%;
+    animation: words-right 2.5s;
+}
+
+
+
+
+.design {
+    right:33%;
+    top:41%;
+    animation: words-left 2s;
+}
+
+.inspiration {
+    right:64%;
+    top:24%;
+    animation: words-left 3s;
+}
+
+.graphics {
+    right:28%;
+    top:80%;
+        animation: words-left 2s;
+}
+
+.expression {
+    right:15%;
+    top:31%;
+        animation: words-left 5s;
+}
+
+.art {
+    right:20%;
+    top:52%;
+        animation: words-left 4s;
+}
+
+.emotion {
+    right:68%;
+        top:50%;
+        animation: words-left 4s;
+}
+
+.creation {
+    right:55%;
+        top:58%;
+        animation: words-left 3s;
+}
+
+.ideas {
+    right:55%;
+        top:72%;
+        animation: words-left 6s;
+}
+
+/* MEDIA QUERY 1024-767
+---------------------------*/
+@media screen and (max-width:1024px) {
+    
+/* header
+---------------------------*/
+        header .flex {
+        align-items: center;
+    }
+    
+    
+ h1 {
+    background-position: 50%;
+}
+    
+.menu p {
+    font-size: 30px;
+    height:100px;
+    width:200px;
+line-height: 100px;
+    text-align: center;
+}
+    
+/* navi
+---------------------------*/
+nav li {
+height:20%;
+}
+
+
+    
+    
+
+    
+/* homepage lines
+---------------------------*/
+
+    .line-one {
+    left: 10%;
+    width:250%;
+}
+    
+    .line-three {
+    transform: rotate(45deg);
+    left:60%;
+}
+    
+    .line-four {
+    transform: rotate(-45deg);
+    top:100%;
+    left:40%;
+}
+    
+    /* homepage words
+---------------------------*/
+ .inspiration, .creation, .emotion, .expression, .art, .ideas, .graphics, .solution, .interaction, .connection, .communication, .css, .html, .javascript {
+    opacity:0.7;
+}
+    
+    
+.design {
+    right:28%;
+    top:42%;
+}
+    
+.expression {
+    right:25%;
+        top:35%;
+}
+    
+.creation {
+        top:15%;
+}
+    
+.communication {
+    left:19%;
+    top: 59%;
+}
+    
+    .javascript {
+    left:54%;
+    top:70%;
+}
+    
+.ideas {
+    right:50%;
+}
+    
+    .solution {
+    top:14%;
+}
+
+.graphics {
+    right:20%;
+    top:20%;
+}
+
+.html {
+    top:80%;
+}
+    
+
+}/*end media query 1024-768*/
+
+
+
+/* MEDIA QUERY 767>
+---------------------------*/
+@media screen and (max-width:767px) {
+    
+/* header
+---------------------------*/
+ h1 {
+    background-position: left;
+}
+    
+.menu p {
+    font-size: 18px;
+    height:60px;
+    width:70px;
+    line-height: 60px;
+    letter-spacing: 4px;
+}
+    
+/* homepage lines
+---------------------------*/
+    .line-two {
+    top:70%;
+}
+    
+    .line-three {
+    left:45%;
+}
+    
+ /* homepage words
+---------------------------*/
+    .web, .design {
+    font-size: 5em;
+}
+
+    .web {
+    left:17%;
+    top:37%;
+}
+    
+    .design {
+    right:11%;
+    top:59%;
+}
+
+.solution, .connection, .inspiration, .javascript, .emotion {
+    font-size:1.7em;
+}
+    
+.inspiration {
+    right:55%;
+        top:25%;
+}
+    
+.emotion {
+    right:20%;
+        top:48%;
+}
+    
+    .solution {
+    left:60%;
+    top:30%;
+}
+
+.connection {
+    left:50%;
+    top:22%;
+}
+
+.javascript {
+    left:35%;
+    top:80%;
+}
+
+.graphics, .interaction, .expression {
+     font-size:2.1em;
+}
+    .interaction {
+    left:15%;
+    top:32%;
+}
+    
+    .graphics {
+         right:28%;
+    top:73%;
+}
+
+.expression {
+    right:10%;
+        top:36%;
+
+}
+
+.html, .css, .creation, .ideas {
+    font-size:2.6em;
+}
+    
+    .creation {
+    right:5%;
+        top:41%;
+}
+
+.ideas {
+    top:48%;
+    right:65%;
+}
+    
+    .html {
+    left:16%;
+   top:70%;
+}
+
+.css {
+     top:58%;
+        left:15%;
+}
+
+.communication, .art {
+    font-size: 2em;
+}
+    
+    .art {
+    top:85%;
+    right:48%;
+}
+    
+    .communication {
+    left:40%;
+    top: 54%;
+}
+
+}/*end media query 767>*/

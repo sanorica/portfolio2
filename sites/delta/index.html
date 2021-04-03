@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>DELTA Dance Company Site</title>
+  <meta name="description" content="コンテンポラリーダンスグループのDELTA Dance Company（デルタ・ダンス・カンパニー）の公式ウェブサイト。">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/vnd.microsoft.ico" href="img/favicon.ico">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+
+ <header>
+<h1><span>DELTA</span> Dance Company</h1>
+</header>
+  <div class="btn"><span></span></div>
+  
+<nav>
+  <ul class="container flex">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Company</a></li>
+  <li><a href="#">Events</a></li>
+  <li><a href="#">Tour</a></li>
+  <li><a href="#">Contacts</a></li>
+  </ul>
+</nav>
+   
+   
+<main>
+  <div class="container-vis">
+    <ul>
+      <li><a href="#"><img src="img/woman02.png" alt="Delta Dance Company"></a></li>
+      <li><a href="#"><img src="img/hands.png" alt="Delta Dance Company"></a></li>
+      <li><a href="#"><img src="img/back.png" alt="Delta Dance Company"></a></li>
+      <li><a href="#"><img src="img/woman01.png" alt="Delta Dance Company"></a></li>
+    </ul>
+        <ul>
+      <li><a href="#"><img src="img/woman_big.png" alt="Delta Dance Company"></a></li>   
+  <li><a href="#"><img src="img/man01.png" alt="Delta Dance Company"></a></li>
+      <li><a href="#"><img src="img/feet.png" alt="Delta Dance Company"></a></li>
+    </ul>
+  </div><!--/.container-->
+</main>
+
+<footer>
+  <p><small>Copyright &copy; 2020 All Right Reserved</small></p>
+</footer>
+ 
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+ <script>
+ $(function(){
+ $('.btn').on('click', function(){
+  $('.btn').toggleClass('cross');
+ $('nav').fadeToggle("slow");
+ });// END function
+ }); //END function
+ </script>
+  </body>
+  </html>

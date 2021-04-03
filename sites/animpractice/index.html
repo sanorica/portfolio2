@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Designer - Federica Sano</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="home">
+   <div class="container">
+    <header>
+       <div class="flex">
+        <h1>Web Designer Federica Sano</h1>
+        <div class="menu"><p>menu</p></div>
+        </div><!-- /.flex -->
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">menu</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">etc</a></li>
+            <li><a href="#">other</a></li>
+        </ul>
+    </nav>
+    
+    <div class="line-zero"></div>
+    <div class="line-one"></div>
+    <div class="line-two"></div>
+    <div class="line-three"></div>
+    <div class="line-four"></div>
+    
+    <p class="web">web</p>
+    <p class="design">design</p>
+    
+    <p class="inspiration">inspiration</p>
+    <p class="creation">creation</p>
+    <p class="emotion">emotions</p>
+    <p class="expression">expression</p>
+    <p class="art">art</p>
+    <p class="ideas">ideas</p>
+    <p class="graphics">graphics</p>
+    
+    <p class="solution">solutions</p>
+    <p class="interaction">interaction</p>
+    <p class="connection">connection</p>
+    <p class="communication">communication</p>
+    <p class="css">css</p>
+    <p class="javascript">javascript</p>
+    <p class="html">html</p>
+    
+    </div><!-- /.container -->
+    
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+ <script>
+ $(function(){
+ $('.menu').on('click', function(){
+ $('nav').toggleClass('slide');
+ $('.menu').toggleClass('open');
+     
+        if( $('.menu').hasClass('open') ){
+    $('.menu p').text('close');
+    } else{
+    $('.menu p').text('menu');
+    }
+ });// END function
+ }); //END function
+     
+ 
+    //ulにclass名：openをつける
+    $('nav .container').toggleClass('open');
+ </script>
+</body>
+</html>

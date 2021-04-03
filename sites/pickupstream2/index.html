@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>PickUp Stream 2</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- HEADER (NAV + .MAIN-VIS)
+ ------------------------------------------------->
+  <header>
+    <div class="container logo"></div>
+    <div class="btn"><span></span></div>
+    <nav>
+      <ul class="container flex">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">サイトについて</a></li>
+        <li><a href="#">注目記事</a></li>
+        <li><a href="#">ブログ</a></li>
+        <li><a href="#">お問合せ</a></li>
+      </ul>
+    </nav>
+
+    <div class="main-vis">
+      <h1>Pickup Stream</h1>
+      <p>日常の何気ない風景を綴るブログ</p>
+    </div>
+  </header>
+
+  <!-- MAIN
+----------------------------------------------------->
+  <main class="container flex">
+
+    <!-- MAIN > .CONTENTS 
+ ---------------------------------------------->
+    <section class="contents">
+      <h2>海岸のデコレーション</h2>
+
+      <p>海岸には砂や貝殻しかないように思ってしまいますが、よく見ると草花も生えていることがわかります。ただし、海水や潮風、強い日差しなどの影響で、大きく育つものは見当たりません。その多くは小さく、地を這って伸びています。</p>
+
+      <p><img src="img/plant.jpg" alt="海浜植物の画像"></p>
+
+      <p>こうした植物は「海浜植物」と呼ばれ、砂をかぶって埋もれても、茎が伸びてまた葉を出す仕組みになっています。</p>
+
+      <p>ところどころに顔を出す緑色の小さな葉っぱは、海岸をかわいくデコレーションしてくれます。海への道中で踏んづけてしまう前に、足元にあるものを観察してみるのもおもしろいですよ。</p>
+    </section>
+
+    <!-- MAIN > .SIDEBAR
+ ---------------------------------------------->
+    <section class="sidebar">
+      <h2>Category Menu</h2>
+
+      <ul>
+        <li><a href="#">山と森林</a></li>
+        <li><a href="#">海と海岸</a></li>
+        <li><a href="#">都市と建築</a></li>
+        <li><a href="#">地上と地下</a></li>
+      </ul>
+
+      <p><a href=""><img src="img/banner600x500.jpg" alt="バナー"></a></p>
+    </section>
+  </main>
+
+  <!-- FOOTER
+-------------------------------------------------->
+  <footer>
+   <div class="container">
+    <p><small>Pickupstream<br>
+        Copyright &copy; Pickupstream All rights reserved.</small></p>
+        </div>
+  </footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+ <script>
+ $(function(){
+ $('.btn').on('click', function(){
+ $('nav').slideToggle('');
+ $('.btn').toggleClass('btn-open');
+ });// END function
+ }); //END function
+ </script>
+
+</body></html>

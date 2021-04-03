@@ -1,0 +1,389 @@
+@charset "UTF-8";
+
+/*** RESET ***/
+html,
+body,
+h1,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.0;
+}
+
+main p {
+color:#555;}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  border: none;
+  vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
+}
+
+/*** RESET END ***/
+
+/*** ALL 
+************************************************/
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*** HEADER
+***********************************************/
+header {
+  margin-bottom: 30px;
+}
+
+/*** HEADER > .LOGO
+***********************************************/
+header .logo {
+  height: 39px;
+  padding: 10px 0;
+  background: url(../img/logo.png) no-repeat 10px center
+}
+
+/*** HEADER > NAV
+***********************************************/
+.btn {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  display: none;
+}
+
+.btn span {
+  height: 4px;
+  width: 35px;
+  background-color: #aaa;
+  border-radius: 3px;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.btn span::before,
+.btn span::after {
+  content: "";
+  height: 4px;
+  width: 30px;
+  background-color: #aaa;
+  border-radius: 3px;
+  display: block;
+}
+
+.btn span::before {
+  margin-top: -10px;
+}
+
+.btn span::after {
+  margin-top: 16px;
+}
+
+.btn-open span {
+  background-color: #d4d3d3;
+}
+
+.btn-open span::before,
+.btn-open span::after {
+  content: "";
+  background-color: #d4d3d3;
+}
+
+nav {
+  background-color: #298295;
+  padding: 20px;
+}
+
+nav li {
+  color: #fff;
+  height: 44px;
+  line-height: 44px;
+  border: 1px solid #fff;
+  width: 18%;
+  font-size: 14px;
+  text-align: center;
+}
+
+nav a {
+  display: block;
+}
+
+nav a:hover {
+  background-color: #3da6bc;
+}
+
+/*** HEADER > .MAIN-VIS
+****************************************************/
+.main-vis {
+  padding: 100px 0;
+  text-align: center;
+  background: url(../img/sky.jpg) center center/cover;
+  color: #fff;
+  text-shadow: 2px 2px 1px #000;
+}
+
+.main-vis h1 {
+  font-size: 56px;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.main-vis p {
+  letter-spacing: 7px;
+}
+
+.main-vis h1,
+.sidebar h2 {
+  font-family: 'Kaushan Script', cursive;
+}
+
+/*** MAIN (TWO-COLUMNS LAYOUT)
+***************************************************/
+main.flex {
+  flex-direction: row-reverse
+}
+
+main .contents {
+  width: 65.6%;
+}
+
+main .sidebar {
+  width: 31.2%;
+}
+
+main h2 {
+  font-size: 28px;
+  color: #185A68;
+  margin-bottom: 10px;
+}
+
+/*** MAIN > .CONTENTS
+***************************************************/
+.contents h2 {
+  border-left: 20px solid #185A68;
+  padding-left: 10px;
+}
+
+.contents p {
+  line-height: 1.5;
+}
+
+.contents p + p {
+  margin-top: 10px;
+}
+
+.contents img {
+  border: 5px solid #185A68;
+}
+
+
+/*** MAIN > .SIDEBAR
+***************************************************/
+.sidebar li {
+  height: 44px;
+  line-height: 44px;
+  font-size: 14px;
+  background: url(../img/listmark.png) no-repeat left center;
+  padding-left: 20px;
+  border-top: 1px solid #185A68;
+}
+
+.sidebar li > a {
+  display: block;
+}
+
+.sidebar li:hover {
+  background-color: #def;
+}
+
+.sidebar li:last-child {
+  border-bottom: 1px solid #185A68;
+  margin-bottom: 50px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+/*** FOOTER 
+*************************************************/
+footer {
+  background: #3da6bc;
+  color: #fff;
+  padding: 30px 0;
+  margin-top: 50px;
+}
+
+footer p {
+  line-height: 1.2
+}
+
+
+/*** MEDIA QUERY (SP 400-767)
+****************************************************/
+
+@media screen and (max-width:767px) {
+
+  /** ALL
+**************************************/
+  .flex {
+    display: block;
+  }
+
+  /*** HEADER
+***********************************************/
+  header {
+    margin-bottom: 20px;
+  }
+
+  /*** HEADER > .LOGO
+***********************************************/
+  header .logo {
+    height: 39px;
+    padding: 5px 0;
+    background-position: center center;
+    background-size: 300px;
+  }
+
+  /*** HEADER > NAV
+**************************************/
+  .btn {
+    display: block
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 49px;
+    background-color: rgba(30, 150, 170, 0.8);
+    width:100%;
+    padding:0;
+  }
+  
+  nav .container {
+        padding:0;
+  }
+
+  nav li {
+    height: 80px;
+    line-height: 80px;
+    border: none;
+    border-bottom:1px solid #fff;
+    width:100%;
+    font-size: 24px;
+  }
+
+  nav a {
+    display: block;
+  }
+
+
+  /*** HEADER > .MAIN-VIS
+****************************************************/
+  .main-vis {
+    padding: 30px 0;
+  }
+
+  .main-vis h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+    letter-spacing: px;
+  }
+
+  .main-vis p {
+    letter-spacing: 3px;
+  }
+
+  /*** MAIN
+*********************************************/
+  main h2 {
+    font-size: 26px;
+  }
+
+  /*** MAIN > .CONTENTS
+***************************************************/
+  main .contents {
+    width: 100%;
+  }
+
+  .contents img {
+    display: block;
+    margin: 0 auto;
+    max-width: 90%
+  }
+
+  .contents p:last-of-type {
+    margin-bottom: 20px;
+  }
+
+  /*** MAIN > .SIDEBAR
+***************************************************/
+  main .sidebar {
+    width: 100%;
+  }
+
+  .sidebar li {
+    height: 50px;
+    line-height: 50px;
+    font-size: 22px;
+    padding-left: 20px;
+    border: 1px solid #185A68;
+    margin-bottom: 10px;
+    background-position: 10px center;
+    padding-left: 30px;
+  }
+
+
+  .sidebar li:last-child {
+    margin-bottom: 10px;
+  }
+
+  /*** FOOTER 
+*************************************************/
+  footer {
+    margin-top: 20px;
+    padding: 10px 0;
+  }
+
+}/* END MEDIA QUERY (SP 400-767)*/
+
+/*** MEDIA QUERY (SP ~400)
+****************************************************/
+
+@media screen and (max-width:400px) {
+
+  /*** HEADER > .LOGO
+***********************************************/
+  header .logo {
+    padding: 5px 10px;
+    background-position: 5px center;
+    background-size: 260px;
+  }
+
+} /*END MEDIA QUERY (SP ~400)*/

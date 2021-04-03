@@ -1,0 +1,388 @@
+@charset "UTF-8";
+
+/*** RESET ***/
+html, body, h1, h2, p, ul, ol, li {
+margin:0;
+padding:0;
+font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+line-height: 1.0;
+list-style: none;
+}
+
+a {
+text-decoration: none;
+color:inherit;
+}
+
+img {
+border:none;
+vertical-align:bottom;
+max-width: 100%;
+height:auto;
+box-sizing: border-box;
+}
+/*** RESET END ***/
+
+
+/*** 共通CSS (CONTAINER & FLEX) **/
+.container {
+max-width:960px;
+margin: 0 auto;
+padding: 0 10px;
+}
+
+header>.container, aside>ul, nav ul, .wrap{
+display: flex;
+justify-content: space-between;
+}
+
+
+/*** HEADER ***/
+header {
+padding:20px 0;
+background: #000;
+color:#fff;
+}
+
+header>.container {
+align-items:flex-end;
+}
+
+header h1 {
+font-family: 'Gochi Hand', cursive;
+text-transform: uppercase;
+font-size:50px;
+margin-bottom: 2px;
+}
+
+aside img {
+height:50px;
+width: 50px;
+margin-left: 10px;
+}
+
+/*** KEY VISUAL ***/
+div.keyvis {
+height:200px;
+background: url(../img/header2.jpg) no-repeat center center/cover;
+}
+
+/*** NAVIGATION ****/
+    .btn {
+      width: 50px;
+      height: 50px;
+      border:1px solid #fff;
+      border-radius: 5px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: none;
+    }
+    
+    .btn span{
+    height:4px;
+    width:35px;
+    background-color: #fff;
+    border-radius:3px;
+    display:block;
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    margin:auto;
+    }
+
+  .btn span::before, .btn span::after {
+  content:"";
+    height:4px;
+    width:35px;
+    background-color: #fff;
+    border-radius:3px;
+    display:block;
+  }
+  
+  .btn span::before {
+  margin-top:-10px;
+  }
+  
+    .btn span::after {
+  margin-top:16px;
+  }
+
+.btn-open {
+background-color: #39d;
+}
+
+nav {
+background: #000;
+}
+
+nav ul {
+margin: 0 auto;
+text-align: center;
+}
+  
+nav li {
+width: 20%;
+color: #fff;
+height: 44px;
+line-height:44px;
+font-size:15px;
+}
+
+nav a {
+display:block;
+border-right:1px solid #fff;
+}
+
+nav li:first-child a {
+border-left:1px solid #fff;
+}
+
+nav a:hover {
+background-color: #39d;
+}
+
+
+/*** 2 columns ***/
+.wrap {
+padding:50px 10px;
+}
+
+main {
+width: 62.5% /*600px*/;
+}
+
+.sidebar{
+width:31.2% /*300px*/;
+}
+
+/**MAIN **/
+main time {
+border-radius: 50%;
+font-weight: bold;
+padding:25px;
+background:#0097d8;
+color:#fff;
+float: right;
+}
+
+main h2 {
+font-size: 28px;
+padding-bottom:10px;
+margin-bottom:10px;
+border-bottom: 1px solid grey;
+}
+
+main .category {
+font-size: 14px;
+}
+
+main img {
+border: 10px solid #0097d8;
+}
+
+main p {
+line-height: 1.5;
+margin-bottom: 10px;
+}
+
+main p:last-child {
+margin-bottom: 0px;
+}
+
+/** SIDEBAR **/
+.sidebar section {
+margin-bottom: 50px;
+}
+
+.sidebar section:last-child {
+margin-bottom: 0;
+}
+
+.sidebar h2 {
+font-size:28px;
+color:#0097d8;
+padding-bottom: 5px;
+}
+
+.sidebar a {
+display: block;
+height: 44px;
+background:  url(../img/listmark.png) no-repeat left center; 
+padding-left: 20px;
+}
+
+.sidebar li {
+border-bottom: 1px solid grey;
+line-height:44px;
+font-size:14px;
+}
+
+.sidebar li:first-child {
+border-top: 1px solid grey;
+}
+
+.sidebar li:hover {
+background-color: #b4f0ff;
+}
+
+
+/*** FOOTER ***/
+footer {
+background: #000;
+color:#fff;
+padding: 30px 0;
+}
+
+footer p:first-child {
+margin-bottom: 5px;
+}
+
+/*** MEDIA QUERY
+***********************************/
+  @media screen and (max-width:767px) {
+  
+  body {
+  position:relative;
+  }
+  
+header>.container, nav ul, .wrap{
+display: block;
+}
+  
+  /*** HEADER ***/
+  header {
+padding:10px 0;
+}
+
+header h1 {
+font-size:35px;
+}
+
+header p {
+font-size:13px;
+}
+
+  header aside {
+position:absolute;
+bottom:10px;
+right: 10px;
+  }
+  
+  aside img {
+height:40px;
+width: 40px;
+margin-left:5px;
+}
+  
+/*** KEY VISUAL ***/
+div.keyvis {
+height:100px;
+}
+  
+/*** NAVIGATION ****/
+.btn {
+display:block;
+}
+
+nav>.container{
+padding:0;
+}
+
+nav {
+background: rgba(0,0,0,0.7);
+position:absolute;
+top:70px;
+width: 100%;
+display:none;
+}
+
+nav li {
+width: 100%;
+color: #fff;
+height: 60px;
+line-height:60px;
+font-size:15px;
+}
+
+nav a {
+display:block;
+border-top:1px solid #fff;
+border-right:none;
+}
+
+nav li:first-child a {
+border-left:none;
+}
+
+nav a:hover {
+background-color: #39d;
+}
+
+/*** CONTENTS ***/
+.wrap {
+padding:10px 10px 20px 10px;
+}
+
+main {
+width: 100%;
+}
+
+.sidebar{
+width:100%;
+}
+
+/** MAIN **/
+
+main time {
+border-radius: 5px;
+padding:5px;
+margin-right:10px;
+float: left;
+}
+
+main h2 {
+font-size: 22px;
+padding:5px 0;
+margin-bottom:5px;
+}
+
+main p {
+margin-bottom: 5px;
+}
+
+main img {
+border: 5px solid #0097d8;
+display:block;
+margin:0 auto;
+}
+
+main p:last-child {
+margin-bottom: 10px;
+}
+
+/** SIDEBAR **/
+.sidebar h2 {
+padding-bottom: 10px;
+}
+
+.sidebar li {
+border: 1px solid grey;
+margin-bottom:10px;
+padding-left:10px;
+}
+
+.sidebar section {
+margin-bottom: 20px;
+}
+
+
+/*** FOOTER ***/
+footer {
+padding: 10px 10px 60px
+}
+
+  
+  } /* END MEDIA QUERY (SP) */

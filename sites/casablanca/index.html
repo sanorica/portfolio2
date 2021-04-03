@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Casa Blanca - European Import Furniture</title>
+  <meta name="description" content="ヨーロッパビンテージ家具の輸入販売のスペシャリストです">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="container flex">
+  <h1>カサブランカ</h1>
+  <p>カサブランカはヨーロッパビンテージ家具の輸入販売のスペシャリストです</p>
+  <div class="btn"><span></span></div>
+</header>
+
+<section class="visual">
+<p class="container">Casa Blanca<br>
+European Import Furniture</p>
+</section>
+ 
+<!-- NAVIGATION -->
+<nav>
+  <ul class="container flex">
+    <li><a href="#">HOME</a></li>
+    <li><a href="#">カサブランカ案内</a></li>
+    <li><a href="#">ビンテージ家具とは？</a></li>
+    <li><a href="#">個人情報保護</a></li>
+    <li><a href="#">お問合せ</a></li>
+  </ul>
+</nav>
+
+<!-- CONTAINER (MAIN & SIDEBAR)-->
+<div class="container flex">
+
+<!-- MAIN -->
+<main>
+<h2>くつろぎの空間を演出</h2>
+<h3>インテリアショップカサブランカへようこそ！</h3>
+<p>ヨーロッパ家具・インテリアをイタリア・スペインより直輸入。<br>
+居心地の良いダイニングルーム、心安らぐリビング、ベッドルーム・・・・今、求められる快適空間をカサブランカはご提供します。</p>
+
+<img src="img/bed.jpg" alt="イタリア製高級ベッドの画像">
+
+<p>まるでフランス映画に出てくるようなスタイルの天蓋付きウッドベッドです。こんなベッドに横たわるあなたはヒロインです。プリンセスなハウススタイリングを演出するお道具として、お使いください。</p>
+
+<p>素材は質量感のあるパイン材を使用しております。マットはポケットコイルをご用意しております価格にはマットが含まれております。手作業で製作しているため、それぞれ微妙に表情が異なります。あらかじめご了承ください。</p>
+</main>
+  
+<!-- SIDEBAR-->
+<aside>
+  <a href="#"><img src="img/banner.jpg" alt="バナー画像"></a>
+  
+  <h2>CATEGORIES</h2>
+  <ul>
+    <li><a href="#">ソファー</a></li>
+    <li><a href="#">ベッド</a></li>
+    <li><a href="#">テーブル</a></li>
+    <li><a href="#">キッチン</a></li>
+  </ul>
+</aside>
+  
+</div><!--/.container-->
+
+<!-- FOOTER -->
+<footer>
+  <p class="container"><small>Copyright &copy; CASA BLANCA, all rights reserved.</small></p>
+</footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+<!--
+ <script>
+ $(function(){
+ $('.btn').on('click', function(){
+ $('nav').animate({
+                width: "toggle"
+            });
+ $('.btn').toggleClass('btn-open');
+ });// END function
+ }); //END function
+ </script>
+-->
+
+ <script>
+ $(function(){
+ $('.btn').on('click', function(){
+ $('nav').toggleClass('slide');
+ $('.btn').toggleClass('btn-open');
+ });// END function
+ }); //END function
+ </script>
+
+</body>
+</html>

@@ -1,0 +1,636 @@
+@charset "UTF-8";
+
+/* RESET
+-----------------------------------*/
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+li,
+dl,
+dt,
+dd,
+table,
+th,
+tr,
+td {
+    margin: 0;
+    padding: 0;
+    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    line-height: 1.0;
+    color: #666;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    border: none;
+    vertical-align: bottom;
+    max-width: 100%;
+    height: auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* RESET END */
+
+/* ALL PAGES
+-----------------------------------*/
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+p,
+h4,
+th,
+td {
+    line-height: 1.5;
+}
+
+/* HEADER
+-----------------------------------*/
+header {
+    background: #365699;
+    padding: 20px 0;
+}
+
+header .flex {
+    align-items: center;
+}
+
+h1 {
+    background: url(../img/logo.png) no-repeat left center;
+    padding-left: 55px;
+    font-size: 22px;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+}
+
+header p {
+    font-size: 12px;
+    color: #fff;
+}
+
+/* PAGE TOP
+-----------------------------------*/
+.page-top {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #365699;
+    text-align: center;
+    height: 70px;
+    width: 70px;
+    border-radius: 20px;
+}
+
+.page-top p {
+    line-height: 70px;
+    color: #365699;
+    font-weight: bold;
+    margin-top:8px;
+}
+
+.page-top:hover {
+    cursor: pointer;
+}
+
+.page-top span {
+    width: 15px;
+    height: 4px;
+    position: absolute;
+    top: 16px;
+    left: 56%;
+    transform: translateX(-50%) rotate(45deg);
+    background-color: #365699;
+    border-radius: 10px;
+}
+
+.page-top span::before {
+    content: "";
+    width: 14px;
+    height: 4px;
+    position: absolute;
+    top: 6px;
+    left: 14%;
+    transform: translateX(-50%) rotate(-270deg);
+    background-color: #365699;
+    border-radius: 10px;
+}
+
+/* NAVIGATION
+-----------------------------------*/
+.btn {
+    display: none;
+}
+
+nav ul.flex {
+    justify-content: flex-start;
+}
+
+nav li {
+    padding: 20px 20px 15px 0;
+}
+
+nav li a {
+    display: inline-block;
+    font-size: 14px;
+}
+
+nav a {
+    border-bottom: 3px solid transparent;
+    padding-bottom: 5px;
+}
+
+nav a.current,
+nav a.current:hover {
+    border-bottom: 3px solid #f60;
+    color: #666;
+}
+
+nav a:hover {
+    border-bottom: 3px solid #365699;
+    color: #365699;
+}
+
+
+/* MAIN-VISUAL
+-----------------------------------*/
+.vis-one {
+    background: url(../img/mall_bg.jpg) no-repeat top center/cover;
+}
+
+.vis-two {
+    background: url(../img/mall_bg2.jpg) no-repeat center center/cover;
+}
+
+.vis-three {
+    background: url(../img/mall_bg3.jpg) no-repeat right center/cover;
+}
+
+.bx-wrapper {
+    border: 0;
+    margin-bottom: 60px;
+}
+
+.main-vis p {
+    padding: 100px 0;
+    font-size: 36px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px #000;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+
+/* index.html MAIN (#home)
+-----------------------------------*/
+#home main.container {
+    margin: 20px auto;
+}
+
+#home main section {
+    width: 32%;
+}
+
+#home main section:hover {
+    background: #fea;
+}
+
+#home main section h2 {
+    font-size: 18px;
+    border-left: 10px solid #f60;
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
+
+#home main section div.image img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 10px;
+}
+
+#home main section p {
+    font-size: 14px;
+}
+
+/* MALL HEADER (durian.html, shiodome.html)
+-----------------------------------*/
+.mall-vis h2 {
+    padding: 50px 10px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 1px #000;
+    font-size: 30px;
+}
+
+.durian-vis {
+    background: url(../img/mall/durian-header.jpg) center bottom/cover;
+}
+
+
+.shiodome-vis {
+    background: url(../img/mall/shiodome-header.jpg) center center/cover;
+}
+
+.thamrin-vis {
+    background: url(../img/mall/thamrin-header.jpg) center center/cover;
+}
+
+/* durian.html, shiodome.html MAIN
+-----------------------------------*/
+body.malls-contents main{
+    padding: 30px 10px;
+}
+
+body.malls-contents .contents {
+    width: 62.5%;
+}
+
+body.malls-contents .sidebar {
+    width: 31.25%;
+}
+
+/* durian.html CONTENTS
+-----------------------------------*/
+body.malls-contents .contents h3 {
+    color: #059;
+    background: url(../img/mall/mall-mark.png) no-repeat 10px center;
+    background-color: #cef;
+    padding: 20px 10px 20px 50px;
+    margin-bottom: 20px;
+}
+
+body.malls-contents .contents p + p {
+    margin-top: 10px;
+}
+
+body.malls-contents .mallinfo {
+    margin-bottom: 30px;
+}
+
+body.malls-contents .shopimage {
+    width: 130px;
+}
+
+body.malls-contents .shopimage img {
+    padding: 3px;
+    object-fit: contain;
+    object-position: center;
+    border: 1px solid #aaa;
+}
+
+body.malls-contents .infobox {
+    width: 440px;
+}
+
+body.malls-contents .infobox h4 {
+    margin-bottom: 10px;
+    border-left: 5px solid #f60;
+    padding-left: 5px;
+}
+
+body.malls-contents .infobox table{
+    width: 100%;
+}
+
+body.malls-contents .infobox th, body.malls-contents .infobox td {
+    border: 1px solid #aaa;
+    padding: 5px;
+    font-size: 14px;
+}
+
+body.malls-contents .infobox th {
+    background: #ddd;
+    width: 30%
+}
+
+body.malls-contents .shopinfo h5  {
+    background-color: #0cf;
+    border-radius: 50%;
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    margin: 10px 0 5px;
+}
+
+body.malls-contents .comment {
+    border: 1px solid #0cf;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+body.malls-contents .comment:last-child,
+body.malls-contents .comment p:last-child
+{
+    margin-bottom: 0;
+}
+
+/* MALL SIDEBAR (durian.html)
+-----------------------------------*/
+body.malls-contents .othermalls {
+    background: #008ec2;
+    padding-top: 1px;
+    margin-bottom: 30px;
+}
+
+body.malls-contents .othermalls h3 {
+    margin: 20px 10px;
+    border-left: 2px solid #fff;
+    color: #fff;
+    padding-left: 10px;
+}
+
+body.malls-contents .othermalls ul{
+    background: #cef;
+    padding: 20px;
+}
+
+body.malls-contents .othermalls li {
+    background: #cef;
+    padding: 10px;
+    border-bottom: 1px dotted #555
+}
+
+body.malls-contents .othermalls li:last-child {
+    border-bottom: none;
+}
+
+body.malls-contents .othermalls li:hover {
+    background: #0695d7;
+    color: #fff;
+}
+
+body.malls-contents .othermalls a {
+    display: block;
+}
+
+
+/* FOOTER
+-----------------------------------*/
+footer {
+    background: #365699;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer p {
+    color: #fff;
+}
+
+/* media query (900-960px)
+-------------------------------------------------*/
+@media screen and (max-width:960px) {
+
+    body.malls-contents .infobox {
+        width: calc(100% - 140px);
+    }
+}
+
+/* END MEDIA QUERY 900-960px*/
+
+
+/* media query (768-900px)
+-------------------------------------------------*/
+@media screen and (max-width:900px) {
+
+   body.malls-contents main.flex{
+        display: block;
+    }
+
+    body.malls-contents main .contents {
+        width: 100%;
+    }
+
+    body.malls-contents main .sidebar{
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    body.malls-contents .sidebar img {
+        width: 300px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+}
+/* END media query 768-900px*/
+
+
+/* media query (600-767px)
+-------------------------------------------------*/
+@media screen and (max-width:767px) {
+
+    /* HEADER
+-----------------------------------*/
+    h1 {
+        font-size: 18px;
+    }
+
+    /* NAVIGATION
+-----------------------------------*/
+    nav {
+        display: none;
+        background-color: rgba(54, 86, 153, 0.8);
+        position: absolute;
+        width: 100%;
+        top: 160px;
+        z-index: 2;
+    }
+
+    nav.container {
+        padding: 0;
+    }
+
+    nav ul.flex {
+        display: block;
+    }
+
+    nav li {
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        padding: 0;
+        border-bottom: 1px solid #fff;
+    }
+
+    nav li:last-child {
+        border-bottom: none;
+    }
+
+    nav li a {
+        font-size: 18px;
+        color: #fff;
+        text-shadow: 1px 1px 1px #000;
+    }
+
+    nav a.current,
+    nav a.current:hover {
+        border-bottom: none;
+        color: #f29e66;
+    }
+    
+    nav a:hover {
+    border-bottom: none;
+    color: #cef;
+    }
+
+    .btn {
+        display: block;
+        height: 70px;
+        text-align: center;
+        background: linear-gradient(to bottom, #b0d9e6, #fff);
+        border: 1px solid #365699;
+    }
+
+    .btn i {
+        color: #365699;
+        font-size: 40px;
+        line-height: 70px;
+        transition-duration: 1s;
+    }
+
+    .upside i {
+        transform: rotate(-180deg);
+    }
+
+    /* MAIN VISUAL
+-----------------------------------*/
+    .main-vis p {
+        padding: 50px 0;
+        font-size: 26px;
+    }
+
+
+    /* index.html MAIN (#home)
+-----------------------------------*/
+    #home main.container {
+        margin-bottom: 0;
+    }
+
+    #home main.flex {
+        display: block;
+    }
+
+    #home main section {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #home main section:last-child {
+        margin-bottom: 0;
+    }
+
+    #home main section h2 {
+        border-left-width: 6px;
+    }
+
+    #home main section div.image img {
+        height: 400px;
+    }
+
+    /* FOOTER
+-----------------------------------*/
+    footer {
+        margin-top: 30px;
+        padding: 20px 0;
+    }
+
+}
+/* end media query 600-767px */
+
+
+/* media query (594-600px)
+-------------------------------------------------*/
+@media screen and (max-width:600px) {
+
+    body.malls-contents .shopinfo .flex {
+        display: block;
+    }
+
+   body.malls-contents .shopimage {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto 20px;
+    }
+
+    body.malls-contents .infobox {
+        width: 100%;
+    }
+}
+
+/* end media query 594-600px */
+
+/* media query (max 594)
+-------------------------------------------------*/
+@media screen and (max-width:594px) {
+
+/* HEADER
+-----------------------------------*/
+    header {
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    header .flex {
+        display: inline-block;
+    }
+
+    header p {
+        display: none;
+    }
+
+    /* NAVIGATION
+-----------------------------------*/
+    nav {
+        top: 140px;
+    }
+
+    /* index.html MAIN (#home)
+-----------------------------------*/
+    .main-vis p {
+        padding: 30px 0;
+        font-size: 16px;
+    }
+
+    /* MAIN */
+    main section div.image img {
+        height: 250px;
+    }
+}
+
+/* end media query <594px */

@@ -1,0 +1,345 @@
+@charset "UTF-8";
+
+/*** RESET ***/
+html, body, p, header, h1, h2, h3, nav, ul, li, a {
+margin:0;
+padding:0;
+list-style:none;
+font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+line-height: 1.0;
+border-collapse: collapse;
+}
+
+img {
+border:none;
+vertical-align: bottom;
+max-width:100%;
+height:auto;
+}
+
+a {
+text-decoration: none;
+color:inherit;
+}
+/** END RESET**/
+
+/*** ALL ***/
+.container{
+max-width:960px;
+margin: 0 auto;
+padding: 0 10px;
+}
+
+.flex {
+display:flex;
+justify-content: space-between;
+}
+
+
+/*** HEADER ***/
+header {
+background: #fff;
+align-items: center;
+}
+
+h1 {
+width: 180px;
+background: url(../img/logo.png) no-repeat center center;
+text-indent:100%;
+white-space: nowrap;
+overflow:hidden;
+height: 67px;
+padding: 10px 0;
+}
+
+header p {
+width:34em;
+}
+
+/*** VISUAL ***/
+.visual {
+background: url(../img/sofa.jpg) no-repeat center center /cover;
+padding: 120px 0 180px 0;
+box-sizing: border-box;
+}
+
+.visual p {
+font-family: 'Italianno', cursive;
+color:#fff;
+font-size:40px;
+text-shadow: 1px 3px 1px #900;
+}
+
+.visual p::first-line {
+font-size: 100px;
+text-shadow: 2px 3px 1px #900;
+}
+
+
+/*** NAV ***/
+nav {
+background: url(../img/btn_bg.png) repeat-x left top;
+}
+
+nav li {
+width:20%;
+height:44px;
+text-align:center;
+border-right:1px solid #fff;
+color:#fff;
+font-size:14px;
+}
+
+nav li:last-child {
+border-right:none;
+}
+
+nav a {
+display:block;
+line-height:44px;
+}
+
+nav a:hover {
+background: url(../img/btn_bg.png) repeat-x left bottom;
+}
+
+.btn {
+ display:none;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 1px solid #aaa;
+  border-radius:10px;
+  display: none;
+  padding:2px;
+}
+
+.btn span {
+  height: 4px;
+  width: 30px;
+  background-color: #aaa;
+  border-radius: 3px;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.btn span::before,
+.btn span::after {
+  content: "";
+  height: 4px;
+  width: 30px;
+  background-color: #aaa;
+  border-radius: 3px;
+  display: block;
+}
+
+.btn span::before {
+  margin-top: -10px;
+}
+
+.btn span::after {
+  margin-top: 16px;
+}
+
+/*** CONTENTS (2 COLUMN) ***/
+main {
+width:65.6%;
+margin:30px 0 50px 0;
+}
+
+aside {
+width:31.2%;
+margin:30px 0 50px 0;
+}
+
+/*** MAIN ***/
+main p {
+line-height: 1.6;
+text-align: justify;
+}
+
+main p+p {
+margin-top:10px;
+}
+
+main h2 {
+border-bottom: 1px solid gray;
+color:#900;
+padding-bottom:5px;
+font-size:28px;
+}
+
+main h3 {
+padding:10px 0;
+color:#d30;
+font-weight: bold;
+}
+
+main img {
+border: 6px solid #bd0202;
+margin: 10px 0;
+box-sizing: border-box;
+}
+
+/*** SIDEBAR (ASIDE)***/
+aside img{
+margin-bottom:50px;
+}
+
+aside h2 {
+color:#d30;
+margin-bottom:10px;
+}
+
+aside li {
+height:44px;
+border-top:1px solid grey;
+}
+
+aside li:last-child {
+border-bottom:1px solid grey;
+}
+
+aside li a {
+display:block;
+line-height:44px;
+font-size:14px;
+background:url(../img/listmark-1.png) no-repeat left center;
+padding-left:20px;
+}
+
+aside li a:hover {
+background-color:#fdc;
+}
+
+
+/*** FOOTER ***/
+footer {
+color:#fff;
+padding:30px 0;
+background: #d30;
+}
+
+/*** MEDIA QUERY
+**********************************/
+
+@media screen and (max-width:767px) {
+
+/*** ALL ***/
+.flex {
+display:block;
+}
+
+/*** HEADER ***/
+h1 {
+margin: 0 auto;
+padding: 0;
+}
+
+header p {
+display:none;
+}
+
+/*** VISUAL ***/
+.visual {
+padding: 30px 0;
+text-align: center;
+}
+
+.visual p::first-line {
+font-size: 80px;
+}
+
+/*** NAV ***/
+nav {
+/*display:none;*/
+background: rgba(200,50,0,0.8);
+position:fixed;
+top:68px;
+width:100%;
+margin-left: 100%;
+/*right:0;*/
+transition:0.6s;
+}
+
+.slide {
+margin-left: 0;
+}
+
+nav .container {
+padding:0;
+}
+
+nav li {
+width:100%;
+height:70px;
+font-size:14px;
+border-right:none;
+border-bottom: 1px solid #e49983;
+}
+
+nav li:last-child {
+border-bottom:none;
+}
+
+nav a {
+line-height:70px;
+}
+
+nav a:hover {
+background: transparent;
+}
+
+
+.btn {
+display:block;
+}
+
+/*** CONTENTS (BLOCK) ***/
+main {
+width:100%;
+margin:20px 0;
+}
+
+aside {
+width:100%;
+margin:20px 0;
+}
+
+/*** MAIN ***/
+main p, main h3 {
+font-size: 14px;
+}
+
+main img, aside img {
+display:block;
+margin:10px auto;
+}
+
+/*** SIDEBAR (ASIDE)***/
+aside img{
+margin-bottom:20px;
+}
+
+aside li {
+border:1px solid grey;
+margin-bottom:5px;
+padding-left:10px;
+}
+
+aside li a:hover {
+background-color:transparent;
+}
+
+main h2, aside h2, footer {
+text-align:center;
+}
+
+  }/*END MEDIA QUERY*/

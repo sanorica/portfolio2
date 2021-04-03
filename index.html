@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Federica Esposito Sanoの転職活動のためのポートフォリオサイト</title>
   <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -18,6 +21,7 @@
 
     <div class="main-navigation">
       <div class="menu-btn">
+        <p onclick="changeTextMenu()" id="menu-title">menu</p>
         </div>
 
         <nav>
@@ -32,55 +36,261 @@
   <header>
 
 <main>
-<div id="intro">
+<section id="intro" class="container">
   <h2>Hello! I`m Federica!</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam a quos possimus, dolorum nostrum delectus est, explicabo molestiae architecto, voluptatum repellendus omnis, odio unde reiciendis officiis fugit saepe ducimus repellat.</p>
-</div>
+  <p>初めまして。Federica Esposito Sano（佐野・エスポジト・フェデリカ）です。<br>
+  イタリア出身で、5年前から東京在住。現在、Web制作業界に転職しようと考えて、就活中です。</p>
 
-<div id="aboutme">
+  <p>こちらは転職のための自分のポートフォリオサイトです。</p>
+</section>
+
+<section id="aboutme" class="container">
   <h2>About me</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam a quos possimus, dolorum nostrum delectus est, explicabo molestiae architecto, voluptatum repellendus omnis, odio unde reiciendis officiis fugit saepe ducimus repellat.</p>
-</div>
+  <p>・高校時代、初めてウェブサイトを作ってました。当時はまだweb designという言葉は知らず、ただの趣味として独学で好きなミュージシャンのファンサイトやブログのレイアウトなどを作ったりしてました。</p>
+  <p>・高校を卒業し、１９歳で初めて来日しました。日本語の勉強に集中するため、ウェブサイトを作れなくなりました。日本語学校を卒業し、バーテンダーとして働いてました。</p>
+  <p>・日本での経験を活かすためにイタリアに帰って、異文化コミュニケーション学部（大学）に入りました。</p>
+  <p>・大学卒業後、もう一度日本に引っ越して、サービス業界で働いてました。</p>
+  <p>・ある事情をきっかけに、2020年に自分の人生を考え直すことになり、転職するために真面目にウェブデザインを勉強することにしました。</p>
+  <p>・現在、自分のスキルを磨きながら、就活中です。</p>
+</section>
 
-<div id="skills">
+<section id="skills" class="container">
   <h2>My skills</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam a quos possimus, dolorum nostrum delectus est, explicabo molestiae architecto, voluptatum repellendus omnis, odio unde reiciendis officiis fugit saepe ducimus repellat.</p>
-</div>
 
-<div id="workplace">
+  <section>
+      <h3>HTML 5 & CSS 3　（中級）</h3>
+      <p>_ウェブサイト制作の基本（マークアップ、スタイリング）を問題なくわかります。float, flex, gridレイアウトの制作が可能。<br>
+        _ダイナミックなウェブサイトについて、Javascriptでアニメーション作るよりも、CSSアニメーションを使います（JS/jQueryはトリガーとして利用）。<br>
+      _ネットでCSSネタを探してチェックするのが特に好きです。<br>
+     _Media queriesを使ってレスポンシブなウェブサイトを作れます。</p>
+  </section>
+
+  <section>
+      <h3>JavaScript　（初級）</h3>
+      <p>_Vanilla JSの基本が理解できます。<br>
+        _アニメーションのトリガーとしてjQuery使えます。</p>
+  </section>
+
+  <section>
+  <h3>Wordpress　（初級）</h3>
+    <p>_ローカルで基本の動きやレイアウト作りができます。。</p>
+  </section>
+
+  <section>
+  <h3>デザイン　（中級）</h3>
+    <p>_Photoshopで画像補正・加工。Illustratorで素材作りができます。Adobeソフトではないグラフィックツールも基本に使えることができます。<br>
+      _簡単なイラストなども描けることができます。</p>
+  </section>
+
+  <section>
+  <h3>色彩・配色の知識　（中級）</h3>
+    <p>_色彩検定３級持ってます。現在２級を取ろうと考えてます。</p>
+  </section>
+
+  <section>
+  <h3>語学力（上級）</h3>
+    <p>_日本語、英語、イタリア語の3カ国後ができます。</p>
+  </section>
+</section>
+
+<section id="workplace" class="container">
   <h2>Workplace & Tools</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam a quos possimus, dolorum nostrum delectus est, explicabo molestiae architecto, voluptatum repellendus omnis, odio unde reiciendis officiis fugit saepe ducimus repellat.</p>
-</div>
+  <section>
+  <h3>Graphic Tools</h3>
+<ul>
+  <li>Adobe Photoshop</li>
+  <li>Adobe Illustrator</li>
+  <li>Clip Studio Paint</li>
+  <li>Krita</li>
+</ul>
+  </section>
 
-<div id="works">
+  <section>
+  <h3>Code Editor</h3>
+<ul>
+  <li>Brackets</li>
+  <li>Atom</li>
+  <li>Visual Studio Code</li>
+</ul>
+  </section>
+
+  <section>
+  <h3>OS</h3>
+<ul>
+  <li>Windows</li>
+  <li>MacOs (MacBook Air)</li>
+</ul>
+  </section>
+
+</section>
+
+<section id="works" class="container">
   <h2>What I can do</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam a quos possimus, dolorum nostrum delectus est, explicabo molestiae architecto, voluptatum repellendus omnis, odio unde reiciendis officiis fugit saepe ducimus repellat.</p>
+    <p>以下の作品は全部サンプルです。</p>
+
+  <section>
+  <h3>ウェブサイト制作(レスポンシブ)</h3>
+<div class="flex">
+  <div class="site-thumb"><a href="sites/casablanca/index.html" target="_blank"><img src="img/mockup/interior-thumb.png" alt="Coding Practice"></a></div>
+  <div class="site-info"><p>HTMLとCSSの練習のためのインテリア家具店のサンプルウェブサイト。</p>
+  <p>Photoshopの練習として、バナーも制作しました。</p></div>
+
+  <div class="site-thumb"><a href="sites/delta/index.html" target="_blank"><img src="img/mockup/delta-thumb.png" alt="Coding Practice"></a></div>
+  <div class="site-info"><p>Gridレイアウト風のサンプルウェブサイト。</p>
+    <p>PC、タブレット、スマートフォンの三つのデバイス対応です。</p>
+  </div>
+
+  <div class="site-thumb"><a href="sites/pickupstream/index.html" target="_blank"><img src="img/mockup/pickup-thumb.png" alt="Coding Practice"></a></div>
+  <div class="site-info"><p>Blogレイアウトのサンプル。</p>
+  </div>
+
+  <div class="site-thumb"><a href="sites/pickupstream2/index.html" target="_blank"><img src="img/mockup/pickup2-thumb.png" alt="Coding Practice"></a></div>
+  <div class="site-info"><p>Blogレイアウトのサンプル。</p>
+    <p>Photoshopの練習として、バナーも制作しました。</p>
+  </div>
+
+  <div class="site-thumb"><a href="sites/pioneermall/index.html" target="_blank"><img src="img/mockup/pioneer-thumb.png" alt="Coding Practice"></a></div>
+<div class="site-info"><p>HTML、CSS練習のためのコーポレイトサイトのサンプルです。</p>
+  <p>練習した部分：ヘッダー画像スライダー、バナー制作、マルチページサイト制作。</p>
+</div>
+  </section>
+
+  <section>
+  <h3>CSS Animation & Transition/hover effects & Parallax effect</h3>
+<div class="flex">
+<div class="site-thumb"><a href="sites/introanimation/index.html" target="_blank"><img src="img/mockup/intro-animation-thumb.png" alt="Coding Practice"></a></div>
+<div class="site-info"><p>CSSアニメーション練習。</p>
 </div>
 
-<div id="upcoming">
+<div class="site-thumb"><a href="sites/animpractice/index.html" target="_blank"><img src="img/mockup/animpractice-thumb.png" alt="Coding Practice"></a></div>
+<div class="site-info"><p>CSSアニメーション練習。</p></div>
+
+<div class="site-thumb"><a href="sites/parallax/index.html" target="_blank"><img src="img/mockup/parallax-thumb.png" alt="Coding Practice"></a></div>
+<div class="site-info"><p>Parallax練習</p></div>
+
+<div class="site-thumb"><a href="sites/rainbowpj/red.html" target="_blank"><img src="img/mockup/red-thumb.png" alt="Coding Practice"></a></div>
+<div class="site-info"><p>未完成練習プロジェクト（Rainbow Project)の第一作。</p>
+<p>練習した部分：CSS Transition, overflow:hidden, scroll-snap</p></div>
+
+<div class="site-thumb"><a href="sites/rainbowpj/orange.html" target="_blank"><img src="img/mockup/orange-thumb.png" alt="Coding Practice"></a></div>
+<div class="site-info"><p>未完成練習プロジェクト（Rainbow Project)の第二作。</p>
+<p>練習した部分：jQuery・CSSアニメション、parallax、background/text clip</p></div>
+</div>
+  </section>
+
+  <section>
+  <h3>ニュースレターのテンプレート制作</h3>
+<div class="flex">
+<div class="site-thumb"><a href="sites/newsletter/newsletter.html" target="_blank"><img src="img/mockup/newsletter-thumb.png" alt="Coding Practice"></a></div>
+<div class="site-info"><p>メール用のinline CSSのメイリングリストレイアウト。</p></div>
+</div>
+</div>
+  </section>
+
+  <section class="graphics-section">
+  <h3>バナー・フライヤー制作</h3>
+  <ul class="banner-thumb flex">
+    <li class="img-thumb"><a href="img/graphics/banner01.png" data-lightbox="banner"><img src="img/graphics/banner01-thumb.jpg" alt="Graphic material"></a></li>
+    <li class="img-thumb"><a href="img/graphics/banner02.png" data-lightbox="banner"><img src="img/graphics/banner02-thumb.jpg" alt="Graphic material"></a></li>
+    <li class="img-thumb"><a href="img/graphics/banner03.jpg" data-lightbox="banner"><img src="img/graphics/banner03-thumb.jpg" alt="Graphic material"></a></li>
+    <li class="img-thumb"><a href="img/graphics/banner04.jpg" data-lightbox="banner"><img src="img/graphics/banner04-thumb.jpg" alt="Graphic material"></a></li>
+    <li class="img-thumb"><a href="img/graphics/banner05.jpg" data-lightbox="banner"><img src="img/graphics/banner05-thumb.jpg" alt="Graphic material"></a></li>
+    <li class="img-thumb"><a href="img/graphics/banner06.jpg" data-lightbox="banner"><img src="img/graphics/banner06-thumb.jpg" alt="Graphic material"></a></li>
+    <li class="img-thumb"><a href="img/graphics/banner07.jpg" data-lightbox="banner"><img src="img/graphics/banner07-thumb.jpg" alt="Graphic material"></a></li>
+    <li class="img-thumb"><a href="img/graphics/banner08.jpg" data-lightbox="banner"><img src="img/graphics/banner08-thumb.jpg" alt="Graphic material"></a></li>
+    <li class="img-thumb"><a href="img/graphics/banner10.jpg" data-lightbox="banner"><img src="img/graphics/banner10-thumb.jpg" alt="Graphic material"></a></li>
+    <li class="img-thumb"><a href="img/graphics/banner11.jpg" data-lightbox="banner"><img src="img/graphics/banner11-thumb.jpg" alt="Graphic material"></a></li>
+    <li class="img-thumb"><a href="img/graphics/banner12.png" data-lightbox="banner"><img src="img/graphics/banner12-thumb.png" alt="Graphic material"></a></li>
+    <li class="img-thumb"><a href="img/graphics/banner13.png" data-lightbox="banner"><img src="img/graphics/banner13-thumb.png" alt="Graphic material"></a></li>
+    <li class="img-thumb"><a href="img/graphics/banner14.png" data-lightbox="banner"><img src="img/graphics/banner14-thumb.png" alt="Graphic material"></a></li>
+  </ul>
+  </section>
+
+  <section class="graphics-section">
+  <h3>ベクター・トレース・ロゴ制作</h3>
+  <ul class="vector-thumb flex">
+    <li class="img-thumb"><a href="img/graphics/vector01.png" data-lightbox="vector"><img src="img/graphics/vector01.png" alt="Graphic material"></a></li>
+    <li class="img-thumb"><a href="img/graphics/vector03.png" data-lightbox="vector"><img src="img/graphics/vector03.png" alt="Graphic material"></a></li>
+    <li class="img-thumb"><a href="img/graphics/vector04.png" data-lightbox="vector"><img src="img/graphics/vector04.png" alt="Graphic material"></a></li>
+        <li class="img-thumb"><a href="img/graphics/vector02.png" data-lightbox="vector"><img src="img/graphics/vector02.png" alt="Graphic material"></a></li>
+  </ul>
+  </section>
+</section>
+
+<section id="upcoming" class="container">
   <h2>Skills I`m going to develop</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam a quos possimus, dolorum nostrum delectus est, explicabo molestiae architecto, voluptatum repellendus omnis, odio unde reiciendis officiis fugit saepe ducimus repellat.</p>
-</div>
+<ul>
+<li>Bootstrap, Tailwindなどのフレームワークの使い方</li>
+<li>PHPとWordpressのオンライン作業</li>
+<li>Adobe XDでプロトタイプ作り</li>
+<li>ウェブサイトだけではなく、アプリのUIの知識</li>
+<li>UXの知識</li>
+<li>アクセシビリティとARIAの知識＋ユニバーサルデザインの知識</li>
+<li>EC運営の知識</li>
+<li>SEOの知識</li>
+</ul>
+</section>
 
-<div id="other">
+<section id="other" class="container">
   <h2>Other</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam a quos possimus, dolorum nostrum delectus est, explicabo molestiae architecto, voluptatum repellendus omnis, odio unde reiciendis officiis fugit saepe ducimus repellat.</p>
-</div>
+  <p>・ウェブデザイナーを目指しながら、他に活動してます。現在プラスサイズモデルとして活躍中です。</p>
+  <p>・趣味は音楽・映画・ドラマ・アニメ鑑賞。<br>
+      _音楽はロック・メタル・ポップスなど幅広く聞きます。たまにベースいじります。歌うのも大好きです。<br>
+      _映画は小さい時から大好きでかなり詳しいです。映画のプロカメラマンになりたい時期もありました。<br>
+      _Netflixをよく見ます。とりあえずエンターテイメントが大好きです。</p>
+  <p>・ミーハーよりもマイノリティの味方です。</p>
+  <p>・言葉よりも行動で証拠を残したい。</p>
+  <p>・人見知りだけど社交的。</p>
+
+    <h3>Contacts</h3>
+    <p>email: federica.sano42[at]gmail.com</p>
+</section>
 </main>
+
+<div class="page-top">
+  <p>top</p>
+</div>
 
 <footer>
   <small><p>Copyright 2021 @ Federica Esposito Sano</p></small>
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 
 <script>
 $(function () {
-  $('.menu-btn').on('click', function () {
-    $('.menu-btn').toggleClass('btn-open');
-$('nav').toggleClass('nav-open');
+  $('#menu-title').on('click', function () {
+  $('.menu-btn').toggleClass('btn-open');
+  $('#menu-title').toggleClass('btn-open');
+  $('nav').toggleClass('nav-open');
   });
   });
+
+  function changeTextMenu() {
+  var x = document.getElementById("menu-title");
+  if (x.innerHTML === "menu") {
+    x.innerHTML = "close";
+  } else {
+    x.innerHTML = "menu";
+  }
+}
+
+$(window).on('scroll', function() {
+   let scroll_pos = $(window).scrollTop();
+      if (600 < scroll_pos) {
+        $('.page-top').fadeIn(1200);
+      }
+      else {
+        $('.page-top').fadeOut(1200);
+      }
+  });
+
+  $('.page-top').on('click', function() {
+     $('html').animate({
+        scrollTop: 0
+        }, 2000);
+    });
   </script>
 </body>
 </html>

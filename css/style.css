@@ -4,9 +4,10 @@
 html, body, h1, h2, h3, p, ul, ol, li, dl dt, dd{
 margin:0;
 padding:0;
-font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+font-family: 'Kiwi Maru', serif;
 line-height: 1.0;
 font-size:16px;
+color:#fff;
 }
 
 ul{
@@ -30,32 +31,56 @@ height:auto;
 }
 
 /* body___________________________*/
-
-body {
-  background-color: #ccc;
+body, h2, .container a::before, h3 {
+  background: #feac5e;
+  background: -moz-linear-gradient(-45deg, #feac5e 0%, #c779d0 50%, #4bc0c8 100%);
+  background: -webkit-linear-gradient(-45deg, #feac5e 0%,#c779d0 50%,#4bc0c8 100%);
+  background: linear-gradient (135deg, #feac5e 0%,#c779d0 50%,#4bc0c8 100%);
+  background-attachment: fixed;
 }
 
 /* common___________________________*/
 .flex {
 display:flex;}
 
+.container {
+  max-width:900px;
+  margin:0 auto;
+  margin-top:100px;
+  padding:50px;
+  background:rgba(0,0,0,0.8);
+  position:relative;
+  outline: solid 1px rgba(0,0,0,0.8);
+  outline-offset: 5px;
+}
+
 /* header___________________________*/
 .header_container {
   height:120px;
   overflow: hidden;
+  outline: solid 1px rgba(0,0,0,0.8);
+  outline-offset: 5px;
 }
 
 .title-bg {
   clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
-  background-color: #eee;
   margin-bottom:20px;
-  width:50%;
+  width:30%;
   height:100%;
   z-index: 3;
+background: transparent;
 }
 
 .title-contents {
-  padding:50px 20px;
+background: url("../img/sanoricalogo.svg") no-repeat 30px 15px;
+background-size: 100px;
+height:200px;
+}
+
+.title-contents h1, .title-contents h3 {
+  text-indent:100%;
+  white-space: nowrap;
+  overflow:hidden;
 }
 
 /* navigation___________________________*/
@@ -66,48 +91,264 @@ position:relative;
 
 .menu-btn {
 height:100%;
-margin-left:-100%;
-clip-path: polygon(50% 0, 60% 0%, 35% 100%, 25% 100%);
+width:400%;
+margin-left:-80%;
+clip-path: polygon(19.5% 0, 100% 0%, 100% 100%, 12% 100%);
 transition-duration: 2s;
-overflow: hidden;
 position:relative;
-cursor: pointer;
-background-color: #fed;
-  z-index:2;
+background:rgba(0,0,0,0.8);
 }
 
-.menu-btn::before {
-  content: "";
-  background: url("../img/right.png") fixed;
-  background-size: 2%;
-  width:100%;
-  height:300%;
+#menu-title {
+  color:#000;
   position:absolute;
-  top:0;
-  left:0;
+  bottom:10%;
+  left:15%;
+  transition-duration: 1s;
+  cursor: pointer;
+  font-size: 1.3em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: 'Space Mono', monospace;
+   color:rgba(255,255,255,0.3);
 }
 
+#menu-title:hover{
+  color:rgba(255,255,255,0.6);
+}
 
-.menu-btn.btn-open::before{
-    transform: scaleX(-1);
+#menu-title.btn-open {
+    transform: rotateX(360deg);
 }
 
 .menu-btn.btn-open{
-  transform:translateX(50%);
+  transform:translateX(35%);
+}
+
+@keyframes nav-ani-back{
+  from {opacity:1}
+  to {opacity:0}
 }
 
 nav {
-  width:300px;
+  width:500px;
   position:absolute;
   top:50%;
   left:-150%;
   transition-duration: 2s;
+  opacity:0;
+    animation: nav-ani-back 0.5s;
+}
+
+@keyframes nav-ani{
+  from {opacity:0}
+  to {opacity:1}
 }
 
 nav.nav-open {
-  left:-15%;
+  left:0;
+  animation: nav-ani 5.5s forwards;
+  /* opacity:1; */
 }
 
-nav ul.flex {
+nav ul.flex, .container .flex {
   justify-content: space-between;
+}
+
+nav li {
+  color:#000;
+  font-family: 'Space Mono', monospace;
+  font-size: 1.1em;
+  position:relative;
+  padding:0.5em;
+  transition-duration: 0.8s;
+}
+
+nav li:nth-child(1):hover {
+  color:#feac5e;
+}
+nav li:nth-child(2):hover {
+  color:#c779d0;
+}
+
+nav li:nth-child(3):hover {
+  color:#4bc0c8;
+}
+
+nav li::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition-duration: 0.8s;
+    background:rgba(0,0,0,0.8);
+    z-index:-1;
+}
+
+nav li:hover::before {
+    width: 100%;
+}
+
+/* contents___________________________*/
+h2, h3 {
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color:#fff;
+  font-family: 'Space Mono', monospace;
+}
+
+h2{
+  font-size: 2.3em;
+  padding-bottom:1em;
+}
+
+h3 {
+  font-size: 1.2em;
+  padding-bottom:0.5em;
+}
+
+#other h3 {
+  padding-top:1em;
+}
+
+.graphics-section h3 {
+  padding-bottom:1em;
+}
+
+.container p, .container li {
+  opacity:0.9;
+  line-height: 1.5;
+}
+
+#workplace li, #upcoming li {
+  list-style:circle inside;
+}
+
+.container p + p {
+  margin-top:1em;
+}
+
+.container a {
+position:relative;
+overflow:hidden;
+text-shadow:2px 2px 1px #000;
+}
+
+.container a::before {
+    content: "";
+    display: block;
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+    transition-duration: 0.4s;
+    z-index:-1;
+    opacity: 0.8;
+}
+.container a:hover::before {
+    right: 0;
+    width:0;
+}
+
+.container section + section{
+margin-top:2em;
+}
+
+.container .flex {
+  flex-wrap: wrap;
+}
+
+.site-thumb, .img-thumb {
+  margin-bottom:1em;
+  overflow: hidden;
+  object-fit:cover;
+  object-position: center;
+  background:transparent;
+}
+
+.site-thumb {
+  width:65%;
+  height:auto;
+}
+
+.img-thumb {
+  width:23%;
+  height:200px;
+}
+
+.site-info {
+  width:30%;
+}
+
+#works p{
+  margin-bottom:1.5em;
+}
+
+#works .flex {
+  align-items: center;
+}
+
+#works img {
+  mix-blend-mode: screen;
+  -webkit-filter: grayscale(90%);
+  filter: grayscale(90%);
+  transition-duration: 0.6s;
+}
+
+#works img:hover {
+  filter: none;
+}
+
+#works .graphics-section img:hover {
+  transform:scale(1.2);
+}
+
+#works a::before{
+  display:none;
+}
+
+
+
+/* page top___________________________*/
+.page-top {
+border: 1px solid #000;
+text-align: center;
+height:60px;
+width:60px;
+position:fixed;
+right:30px;
+bottom:70px;
+background:rgba(255,255,255,0.2);
+display:none;
+}
+
+.page-top p {
+line-height: 60px;
+font-family: 'Space Mono', monospace;
+letter-spacing: 1px;
+color:#000;
+transition-duration: 0.5s;
+}
+
+.page-top:hover p{
+cursor:pointer;
+color:#fff;
+}
+
+/* footer___________________________*/
+footer {
+  margin-top:100px;
+  background:rgba(0,0,0,0.3);
+}
+
+footer p {
+  padding:20px;
+  text-align:center;
+  color: rgba(0,0,0,0.8);
 }
